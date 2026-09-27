@@ -1,0 +1,13 @@
+# Cursor rules — litellm-ingestion-agent
+
+You are working in `litellm-ingestion-agent`, a spec-driven project.
+
+- Source of truth: `docs/SPEC.md`. If code and spec disagree, flag it — do not
+  silently change behavior. Propose the spec edit first.
+- Data shapes: `docs/EXTRACTION_CONTRACT.md` (human) and
+  `src/litellm_ingestion_agent/models.py` (executable). Keep them in sync.
+- Build order: `docs/MILESTONES.md`. Work one GitHub issue at a time.
+- Standards: `ruff` clean, `pytest` green, new behavior has tests.
+- Never write real API keys or secrets into code, tests, or docs. Use
+  placeholders like `sk-...` in fixtures.
+- Keep functions small, typed, and documented with docstrings.

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Secrets & local state
+.env
+*.env
+.litellm-ingestion-agent/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

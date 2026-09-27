@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "litellm-ingestion-agent"
+version = "0.1.0"
+description = "Capture LLM trial offers from unstructured posts and manage them as LiteLLM config."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Ish" }]
+dependencies = [
+    "litellm>=1.0.0",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "typer>=0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[project.scripts]
+litellm-ingestion-agent = "litellm_ingestion_agent.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/litellm_ingestion_agent"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
