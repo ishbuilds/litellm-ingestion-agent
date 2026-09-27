@@ -11,3 +11,13 @@ You are working in `litellm-ingestion-agent`, a spec-driven project.
 - Never write real API keys or secrets into code, tests, or docs. Use
   placeholders like `sk-...` in fixtures.
 - Keep functions small, typed, and documented with docstrings.
+
+## GitHub protocol
+- One issue = one branch named issue-<n>-<slug>. Comment on the issue when starting.
+- PRs include "Closes #<n>" and keep ruff + pytest green.
+
+## Spec change protocol
+- Spec (docs/SPEC.md) changes BEFORE code, never after.
+- Requirement change → edit spec → append to spec changelog → update affected
+  issues (gh issue edit/comment) → new issues for new scope, close dead ones.
+- If the spec doesn't cover what the task needs, stop and propose the spec edit.
